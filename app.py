@@ -4,17 +4,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return 'Success!'
 
 @app.route('/api', methods=['GET'])
 def get_data():
     data = {
-        'id': 1,
-        'name': 'John Doe',
-        'age': 30,
-        'email': 'johndoe@example.com'
+        'id': 00,
+        'name': 'Tarek Rahman',
+        'email': 'tarek@example.com'
     }
     return jsonify(data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0")
